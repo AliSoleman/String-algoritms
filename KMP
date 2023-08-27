@@ -1,0 +1,78 @@
+1.	 const ll NN = 10 + 3e6;
+2.	const ll Mod=1e9+7;
+3.	const ll Inf=1e9;
+4.	int fail[NN] ;
+5.	string s, t ;
+6.	vector<int>idx ;
+7.	 
+8.	void build()
+9.	{
+10.	    int len = 0 ;
+11.	    for (int i = 1 ; i< t.size() ; i++)
+12.	    {
+13.	        while(len > 0 && t[i] != t[len])
+14.	            len = fail[len-1] ;
+15.	 
+16.	        if (t[i] == t[len])
+17.	            ++len ;
+18.	        fail[i] = len ;
+19.	    }
+20.	}
+21.	 
+22.	void search_()
+23.	{
+24.	    int len = 0 ;
+25.	 
+26.	    for (int i = 0 ; i<s.size() ; i++)
+27.	    {
+28.	        while(len > 0 && s[i] != t[len])
+29.	            len = fail[len-1] ;
+30.	 
+31.	        if (s[i] == t[len])
+32.	            ++len ;
+33.	        if (len == t.size())
+34.	        {
+35.	            idx.push_back(i-t.size() + 1) ;
+36.	            len = fail[len-1] ;
+37.	        }
+38.	    }
+39.	}
+40.	const ll NN = 10 + 3e6;
+41.	const ll Mod=1e9+7;
+42.	const ll Inf=1e9;
+43.	int fail[NN] ;
+44.	string s, t ;
+45.	vector<int>idx ;
+46.	 
+47.	void build()
+48.	{
+49.	    int len = 0 ;
+50.	    for (int i = 1 ; i< t.size() ; i++)
+51.	    {
+52.	        while(len > 0 && t[i] != t[len])
+53.	            len = fail[len-1] ;
+54.	 
+55.	        if (t[i] == t[len])
+56.	            ++len ;
+57.	        fail[i] = len ;
+58.	    }
+59.	}
+60.	 
+61.	void search_()
+62.	{
+63.	    int len = 0 ;
+64.	 
+65.	    for (int i = 0 ; i<s.size() ; i++)
+66.	    {
+67.	        while(len > 0 && s[i] != t[len])
+68.	            len = fail[len-1] ;
+69.	 
+70.	        if (s[i] == t[len])
+71.	            ++len ;
+72.	        if (len == t.size())
+73.	        {
+74.	            idx.push_back(i-t.size() + 1) ;
+75.	            len = fail[len-1] ;
+76.	        }
+77.	    }
+78.	}
