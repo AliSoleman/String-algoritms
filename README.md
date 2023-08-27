@@ -1,2 +1,2 @@
-# coursera-ali
+# code algorithms-ali
 Coursera test respository 
